@@ -270,8 +270,8 @@ JetTriggerAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSe
   iEvent.getByToken(token_photons,photons);
 
   for(auto photon = photons->begin(); photon != photons->end(); ++photon){
-    et_pho[phomult] = photon->energy();
-    e_pho[phomult] = photon->et();
+    et_pho[phomult] = photon->et();
+    energy_pho[phomult] = photon->energy();
     eta_pho[phomult] = photon->eta();
     phi_pho[phomult] = photon->phi();
 
